@@ -1,45 +1,212 @@
 [
   {
-    "id": "curso-metodos-numericos",
-    "title": "Métodos Numéricos para Ingeniería",
-    "description": "Curso completo enfocado en la resolución numérica de problemas matemáticos complejos. Aprende métodos de bisección, Newton-Raphson, interpolación y resolución de ecuaciones diferenciales con aplicaciones prácticas.",
+    "id": "curso-1783212281260",
+    "title": "Química PreUniversitaria USAC",
+    "description": "Este curso está diseñado como una herramienta integral de preparación, tanto para el proceso de admisión de la Universidad de San Carlos de Guatemala (USAC) como para reforzar los conocimientos fundamentales de Química a nivel diversificado.",
     "lessons": [
       {
-        "id": "leccion-biseccion",
-        "title": "1. Método de Bisección: Teoría y Práctica",
-        "description": "Introducción a los métodos cerrados para encontrar raíces. Analizaremos el teorema del valor medio, condiciones de convergencia y desarrollaremos el algoritmo de bisección paso a paso.",
-        "youtubeId": "dQw4w9WgXcQ"
+        "id": "leccion-1783212462622",
+        "title": "Clase 1: Fudamentos de Química",
+        "description": "Esta clase introductoria de química abarca tres pilares fundamentales:\n\nFundamentos: Define la química como el estudio de la materia y detalla el método científico.\n\nEvolución histórica: Recorre desde la era de los metales y el atomismo griego, pasando por la alquimia y la iatroquímica, hasta la química moderna con Lavoisier (conservación de la masa) y Dalton (teoría atómica).\n\nClasificación: Presenta las cinco ramas principales de la disciplina (orgánica, inorgánica, analítica, bioquímica y fisicoquímica).",
+        "youtubeId": "https://youtu.be/wT-EqbXotdw"
       },
       {
-        "id": "leccion-newton-raphson",
-        "title": "2. Método de Newton-Raphson y Secante",
-        "description": "Estudio de métodos abiertos de rápida convergencia. Aprenderemos la deducción geométrica utilizando la derivada, la fórmula de recurrencia y el análisis de errores en puntos críticos.",
-        "youtubeId": "dQw4w9WgXcQ"
+        "id": "leccion-1783212592588",
+        "title": "Fundamentos y Clasificación de la Materia",
+        "description": "Esta clase aborda la naturaleza de la materia mediante los siguientes conceptos clave:\n\nPropiedades fundamentales: Se distingue entre masa (cantidad de materia constante) y peso (fuerza variable según la gravedad), además de definir la densidad como la relación entre masa y volumen.\n\nClasificación: La materia se organiza en sustancias puras, diferenciando entre elementos (átomos iguales) y compuestos (combinaciones moleculares o iónicas).\n\nPropiedades: Se clasifican según su dependencia de la cantidad de materia (intensivas vs. extensivas), su método de percepción (cualitativas vs. cuantitativas) y su utilidad para identificar sustancias (generales vs. específicas).",
+        "youtubeId": "https://youtu.be/0QaGz8EGfLk"
       },
       {
-        "id": "leccion-integracion-trapecio",
-        "title": "3. Integración Numérica: Regla del Trapecio y Simpson",
-        "description": "Cómo aproximar integrales definidas de funciones complejas o tabuladas. Implementación del trapecio simple, trapecio compuesto, regla de Simpson 1/3 y Simpson 3/8.",
-        "youtubeId": "dQw4w9WgXcQ"
-      }
-    ]
-  },
-  {
-    "id": "curso-quimica-general",
-    "title": "Principios de Química General",
-    "description": "Curso introductorio a las bases de la química. Cubre estequiometría, estructura atómica, enlaces químicos, termodinámica y equilibrio químico con ejercicios detallados.",
-    "lessons": [
-      {
-        "id": "leccion-estequiometria",
-        "title": "1. Balanceo de Ecuaciones y Estequiometría",
-        "description": "Aprende a balancear ecuaciones químicas por tanteo y redox. Resolveremos problemas de reactivo limitante, reactivo en exceso y porcentaje de rendimiento de reacción.",
-        "youtubeId": "dQw4w9WgXcQ"
+        "id": "leccion-1783212827499",
+        "title": "Conversiones de Unidades y Análisis Dimensional",
+        "description": "Esta clase, dirigida por el profesor Selvin López, se centra en las herramientas matemáticas necesarias para la química:\n\nFundamentos de precisión: Se establecen las reglas de redondeo y el uso de la notación científica con potencias de base 10 para manejar cantidades extremas con facilidad.\n\nAnálisis dimensional: Se explica el método de factores unitarios (igualdades) para realizar conversiones de unidades de longitud, masa y volumen de manera sistemática.\n\nEscalas de temperatura: Se detallan las fórmulas para realizar conversiones entre Celsius, Fahrenheit y Kelvin, incluyendo la derivación de fórmulas combinadas para convertir directamente entre estas escalas.",
+        "youtubeId": "https://www.youtube.com/live/7965qc-BiuM?si=eCbMxEWR9nNHRaFr"
       },
       {
-        "id": "leccion-estructura-atomica",
-        "title": "2. Estructura Atómica y Tabla Periódica",
-        "description": "Revisión histórica de los modelos atómicos y principios de la física cuántica (Schrödinger, de Broglie). Configuración electrónica y propiedades periódicas de los elementos.",
-        "youtubeId": "dQw4w9WgXcQ"
+        "id": "leccion-1783214637101",
+        "title": "Materia, Energía y Calorimetría",
+        "description": "Esta lección impartida por el profesor Selvin López integra conceptos físicos y químicos con aplicaciones prácticas en nutrición y termodinámica:Fundamentos: Se define la materia (a través de la densidad) y la energía (clasificada en cinética y potencial), diferenciando sus propiedades físicas, químicas, intensivas y extensivas.Aplicación nutricional: Se enseña a calcular el aporte energético de los alimentos utilizando el valor calórico de los macronutrientes: 4 kcal/g para carbohidratos y proteínas, y 9 kcal/g para lípidos.Termodinámica y cambios de estado: Se abordan los cambios de estado de la materia y se realizan ejercicios de calorimetría para determinar el calor necesario ($Q$) en variaciones de temperatura y cambios de fase (fusión y vaporización) del agua.",
+        "youtubeId": "https://www.youtube.com/live/8x_29yDjOFs?si=cJMB5G6B74MAcg-e"
+      },
+      {
+        "id": "leccion-1783214752046",
+        "title": "Guía Práctica de Calorimetría del Agua 1",
+        "description": "En esta lección, el profesor Selvin López desarrolla los principios para calcular la transferencia de energía en el agua:Concepto de Caloría: Se establece que 1 caloría es la energía requerida para elevar la temperatura de 1 gramo de agua en 1 °C, utilizando un calor específico de $1 \\, \\text{cal/g°C}$.Ecuación Fundamental: Se utiliza la fórmula de calorimetría para determinar el flujo de energía ($Q$):$$Q = m \\cdot c_e \\cdot \\Delta T$$Donde $m$ es la masa, $c_e$ el calor específico y $\\Delta T$ la diferencia de temperatura ($T_f - T_i$).Aplicación Práctica: A través de ejemplos resueltos, se demuestra cómo calcular el calor necesario para elevar la temperatura de masas específicas de agua, expresando los resultados tanto en calorías como en kilocalorías (kcal).",
+        "youtubeId": "https://youtu.be/XrxnO3sNTzc"
+      },
+      {
+        "id": "leccion-1783214825748",
+        "title": "Calorimetría: Procesos de Cambio de Estado y Temperatura",
+        "description": "En esta clase, el profesor Selvin López enseña cómo determinar el calor total necesario para transformar agua en distintos estados mediante la sumatoria de calores:Fase de Cambio de Fase (Sólido a Líquido): Se calcula el calor latente necesario para fundir el hielo a 0°C. Utilizando un calor de fusión de $80 \\, \\text{cal/g}$, para 175 g de hielo se requieren $14,000 \\, \\text{cal}$ ($14 \\, \\text{kcal}$).Fase de Calentamiento (Calor Sensible): Se emplea la ecuación $Q = m \\cdot c_e \\cdot \\Delta T$ para elevar la temperatura del agua líquida. Con una masa de 175 g y un cambio de temperatura ($\\Delta T$) de 100°C, se requieren $17,500 \\, \\text{cal}$ ($17.5 \\, \\text{kcal}$).Resultado Total: Aplicando la ley de la sumatoria de calores, el requerimiento energético global para elevar la temperatura desde -10°C hasta 90°C es de 31.5 kcal.",
+        "youtubeId": "https://youtu.be/Drht23HD_qs"
+      },
+      {
+        "id": "leccion-1783215536980",
+        "title": "Isótopos y Partículas Subatómicas",
+        "description": "Esta clase explica los isótopos como átomos con igual número de protones pero distinto número de neutrones. El profesor Selvin López detalla el cálculo de la masa atómica como un promedio ponderado de abundancia natural y enseña a identificar protones, electrones y neutrones usando el número atómico y la masa atómica.",
+        "youtubeId": "https://www.youtube.com/live/JBfYsvp1Xvw?si=QfBNZSovYBwMVwka"
+      },
+      {
+        "id": "leccion-1783215639166",
+        "title": "Modelos Atómicos: Del Átomo a la Cuántica",
+        "description": "Este recorrido histórico detalla la evolución del modelo atómico, desde la noción de indivisibilidad de Demócrito y los postulados de Dalton, hasta el descubrimiento de las partículas subatómicas. Se explican los modelos de Bohr, la dualidad onda-partícula y los principios cuánticos de incertidumbre que definen la comprensión probabilística actual del átomo.",
+        "youtubeId": "https://www.youtube.com/live/CzEQnZqi7lg?si=te6Wy8xCIWec9mzb"
+      },
+      {
+        "id": "leccion-1783215709757",
+        "title": "Configuración Electrónica",
+        "description": "Esta guía explica la distribución de electrones en los 7 niveles de energía y sus subniveles (s, p, d, f) según su capacidad máxima. Se enseña el uso del diagrama de Möller para aplicar el principio de Aufbau, permitiendo realizar configuraciones electrónicas detalladas y la representación gráfica de átomos basada en su estructura electrónica.",
+        "youtubeId": "https://www.youtube.com/live/aN3eCGVBxuo?si=J8XX8X8ZoXtk6EPG"
+      },
+      {
+        "id": "leccion-1783215773068",
+        "title": "Números Cuánticos",
+        "description": "Esta lección explica los cuatro números cuánticos derivados de la ecuación de Schrödinger: principal (n), azimutal (l), magnético (ml) y spin (ms). Se detalla cómo aplicarlos mediante diagramas de orbitales, utilizando las reglas de Pauli y Hund para localizar el electrón diferencial en diversos elementos como el carbono, sodio y hierro.",
+        "youtubeId": "https://youtu.be/cJlLmGhE-qo"
+      },
+      {
+        "id": "leccion-1783218331964",
+        "title": "La Tabla Periódica y sus Propiedades",
+        "description": "Esta guía detalla la organización de los elementos en grupos y periodos según su número atómico y familias químicas. Asimismo, explica las propiedades periódicas fundamentales como el radio atómico, la electronegatividad, la energía de ionización y la afinidad electrónica, las cuales determinan el comportamiento químico de los elementos.",
+        "youtubeId": "https://www.youtube.com/live/AS8_TLYttRQ?si=qfGMGWJpZECYxGqa"
+      },
+      {
+        "id": "leccion-1783218388652",
+        "title": "Electrones de Valencia y Regla del Octeto",
+        "description": "Esta lección explica cómo identificar los electrones del último nivel de energía y simplificar configuraciones electrónicas mediante el método \"Kernel\" basado en gases nobles. Además, detalla la representación gráfica de Lewis y el funcionamiento de la regla del octeto, que describe cómo los átomos ganan o pierden electrones para alcanzar estabilidad química.",
+        "youtubeId": "https://youtu.be/QyuZaC1I3Yw"
+      },
+      {
+        "id": "leccion-1783220584132",
+        "title": "Enlace Iónico",
+        "description": "Esta clase explica la formación de enlaces iónicos mediante la transferencia de electrones entre átomos con una diferencia de electronegatividad mayor o igual a 1.8. Se detalla cómo este proceso genera cationes y aniones que se atraen electrostáticamente, ilustrando el mecanismo con ejemplos como el cloruro de sodio (NaCl) y el cloruro de magnesio (MgCl₂).",
+        "youtubeId": "https://youtu.be/94y46c0l0nQ?si=x5CFNHyVQ4icJkWb"
+      },
+      {
+        "id": "leccion-1783218542893",
+        "title": "Enlace Covalente",
+        "description": "Esta clase detalla cómo los átomos comparten electrones para alcanzar estabilidad electrónica. Se clasifica en enlace polar (diferencia de electronegatividad de 0.4 a 1.79), caracterizado por una distribución desigual de carga en moléculas como el agua o el amoníaco, y enlace apolar (diferencia de 0 a 0.39), donde los electrones se comparten equitativamente, formando enlaces dobles o triples en moléculas como el oxígeno o el nitrógeno.",
+        "youtubeId": "https://youtu.be/llKovzVySRY"
+      },
+      {
+        "id": "leccion-1783218611660",
+        "title": "Enlaces Químicos y Estructuras de Lewis",
+        "description": "Esta lección repasa el enlace iónico (transferencia de electrones entre metales y no metales) y profundiza en los tipos de enlaces covalentes: polares (compartición desigual) y apolares (compartición equitativa). Asimismo, se introduce el enlace coordinado o dativo y se detalla el método para dibujar estructuras de Lewis, utilizando una fórmula matemática para determinar el número de enlaces en moléculas como el $CO_2$ y el $H_2CO_3$.",
+        "youtubeId": "https://www.youtube.com/live/5B8VnOCdIAs?si=C-2jj10t5d66RQ1C"
+      },
+      {
+        "id": "leccion-1783218663452",
+        "title": "Números de Oxidación",
+        "description": "Esta clase explica los estados de oxidación como indicadores del movimiento de electrones, donde la pérdida de estos implica oxidación y la ganancia implica reducción. Se detallan reglas fundamentales, como el valor cero para elementos en estado puro y la premisa de que la suma total en compuestos neutros debe ser cero, aplicando estos criterios en ejercicios prácticos con sustancias como el agua, el ácido sulfúrico y el permanganato de potasio.",
+        "youtubeId": "https://www.youtube.com/live/PDD9ZjVKpDw?si=nCmpr69epko-PoED"
+      },
+      {
+        "id": "leccion-1783218762908",
+        "title": "Óxidos Básicos y Anhídridos",
+        "description": "Esta clase explica la nomenclatura de compuestos binarios oxigenados, diferenciando entre fórmulas empíricas y moleculares. Se detallan los tres sistemas internacionales de nomenclatura: el Tradicional (usando prefijos y sufijos), el Estequiométrico (prefijos griegos) y el sistema Stock/IUPAC (números romanos), aplicándolos tanto en óxidos metálicos como en anhídridos no metálicos para asegurar una correcta identificación química.",
+        "youtubeId": "https://www.youtube.com/live/k20WA7LNnYk?si=CD6sWaf_AhOWq4j_"
+      },
+      {
+        "id": "leccion-1783218810581",
+        "title": "Nomenclatura de Compuestos Inorgánicos: Hidrogenados, Sales e Hidróxidos",
+        "description": "Esta clase aborda la nomenclatura de compuestos inorgánicos, iniciando con los hidrogenados: hidruros metálicos (donde el hidrógeno actúa con -1) y ácidos hidrácidos (hidrógeno con +1 en solución acuosa). Se presentan los nombres triviales de moléculas comunes como el agua y el amoníaco, y se explica la formación de sales binarias (haloideas), aleaciones y amalgamas. Finalmente, se detalla la estructura de los hidróxidos, compuestos ternarios definidos por el grupo funcional hidroxilo (OH-), explicando su formación y las reglas de nomenclatura para equilibrar cargas metálicas.",
+        "youtubeId": "https://www.youtube.com/live/aXTVf28azvE?si=yR-0pAPp6wZRrJWr"
+      },
+      {
+        "id": "leccion-1783218882221",
+        "title": "Oxiácidos y Oxisales",
+        "description": "Esta clase detalla la formación de oxiácidos mediante la combinación de anhídridos con agua, aplicando las reglas de nomenclatura tradicional con prefijos y sufijos según el estado de oxidación. Se abordan casos especiales, como los elementos anfotéricos y los ácidos polihidratados (ej. ortofosfórico).\n\nPosteriormente, se explica la síntesis de oxisales, proceso donde se sustituye el hidrógeno de un oxiácido por un metal. Se establece la regla clave de nomenclatura: los ácidos terminados en \"-ico\" forman sales terminadas en \"-ato\", y los terminados en \"-oso\" forman sales en \"-ito\", ilustrado con ejemplos como el nitrato de sodio y el carbonato de calcio.",
+        "youtubeId": "https://www.youtube.com/live/Ft1CbA8gBI8?si=MkDzueaMtn_gnbOF"
+      },
+      {
+        "id": "leccion-1783218933172",
+        "title": "Sales Cuaternarias y Complejas",
+        "description": "Esta lección detalla la nomenclatura de sales derivadas de la neutralización ácido-base. Se explican las oxisales neutras, las sales ácidas (con hidrógenos residuales), las sales básicas (que conservan grupos hidroxilo) y las sales dobles (con dos metales distintos). El proceso se basa en el uso de una tabla de aniones para aplicar correctamente los sufijos y prefijos según la estructura del compuesto.",
+        "youtubeId": "https://www.youtube.com/live/gmd6cc0WSTw?si=pODzNT7v_dKQdI9E"
+      },
+      {
+        "id": "leccion-1783219005309",
+        "title": "Conceptos de Mol y Composición Porcentual",
+        "description": "Esta lección define el mol como $6.022 \\times 10^{23}$ unidades elementales y enseña a realizar conversiones entre masa (gramos) y cantidad de sustancia (moles) mediante la masa molar. Asimismo, detalla el cálculo de la composición porcentual, que permite determinar el peso relativo de cada elemento en un compuesto dividiendo su masa individual por la masa molecular total, siendo un paso esencial para comprender la composición química de las sustancias.",
+        "youtubeId": "https://www.youtube.com/live/4DpE7lj9kio?si=ckyLGt5s6UKAO0rb"
+      },
+      {
+        "id": "leccion-1783219132900",
+        "title": "Fórmula Empírica y Molecular",
+        "description": "Esta lección detalla el procedimiento sistemático para determinar la composición de los compuestos. La fórmula empírica se obtiene al convertir porcentajes o masas a moles, dividir por el valor menor y, de ser necesario, aplicar un factor de redondeo para obtener números enteros. Para la fórmula molecular, se divide la masa molecular real entre la masa de la fórmula empírica, utilizando el resultado como factor multiplicador para ajustar los subíndices de la fórmula base.",
+        "youtubeId": "https://www.youtube.com/live/bmANOvv2I8I?si=9matHE115WiyVrOe"
+      },
+      {
+        "id": "leccion-1783219236517",
+        "title": "Tipos de Reacciones Químicas",
+        "description": "Esta lección clasifica las reacciones químicas en: síntesis (unión de sustancias), descomposición (ruptura de compuestos), desplazamiento simple (sustitución por reactividad) y doble desplazamiento (intercambio mutuo). También explica la neutralización entre ácidos y bases para formar sal y agua, y los tipos de combustión: completa (con $CO_2$) e incompleta (con $CO$ por falta de oxígeno).",
+        "youtubeId": "https://youtu.be/EiHrB190u3U"
+      },
+      {
+        "id": "leccion-1783219283244",
+        "title": "Balanceo de Ecuaciones Químicas",
+        "description": "Esta clase enseña a igualar ecuaciones bajo la Ley de Conservación de la Materia, diferenciando entre el método del tanteo (balanceo por inspección en orden: metales, no metales, hidrógeno y oxígeno) y el método algebraico (resolución de sistemas de ecuaciones para casos complejos). Se enfatiza la regla de oro: ajustar únicamente los coeficientes estequiométricos y nunca alterar los subíndices de las fórmulas químicas.",
+        "youtubeId": "https://www.youtube.com/live/Udc2zK6FJoI?si=WlkP0M71ynm1_vjW"
+      },
+      {
+        "id": "leccion-1783219363276",
+        "title": "Estequiometría: Cálculos y Rendimiento",
+        "description": "Esta clase profundiza en la estequiometría mediante el método de análisis por factor unitario, eliminando la dependencia de reglas de tres. El procedimiento central consiste en convertir las masas iniciales a moles, aplicar la relación estequiométrica derivada de los coeficientes de la ecuación balanceada y convertir finalmente a la unidad deseada.\n\nUn pilar fundamental de la lección es la identificación del reactivo limitante (el componente que se agota primero y dicta el límite de producción) y el cálculo del porcentaje de rendimiento",
+        "youtubeId": "https://www.youtube.com/live/d39eCl7HA9Y?si=A33auUFUot66z2CN"
+      },
+      {
+        "id": "leccion-1783219499556",
+        "title": "Reacciones REDOX: Oxidación y Reducción",
+        "description": "Este video introduce las reacciones de óxido-reducción, explicando la oxidación como la pérdida de electrones y la reducción como la ganancia de estos. Detalla las reglas fundamentales para asignar números de oxidación en compuestos neutros y elementos puros, concluyendo con ejercicios prácticos resueltos paso a paso en sustancias como el $KMnO_4$, $H_2SO_4$ y $NaCl$.",
+        "youtubeId": "https://youtu.be/VaBCFjMMgm0"
+      },
+      {
+        "id": "leccion-1783219559726",
+        "title": "Balanceo de Reacciones REDOX",
+        "description": "Este video es una guía práctica para balancear ecuaciones de óxido-reducción mediante el método de semi-reacciones, identificando agentes oxidantes y reductores a través de los cambios en los números de oxidación. El contenido abarca desde el ajuste de flujos electrónicos en ejemplos complejos que requieren balanceo estequiométrico por tanteo, hasta la resolución de reacciones de desproporción, donde una misma sustancia se oxida y se reduce simultáneamente.",
+        "youtubeId": "https://youtu.be/GXsC808OZqU"
+      },
+      {
+        "id": "leccion-1783219615133",
+        "title": "Balanceo REDOX: Método del Ión-Electrón en Medio Ácido",
+        "description": "Este video explica el método del ión-electrón para balancear ecuaciones redox en medio ácido, detallando cómo equilibrar los átomos de oxígeno añadiendo moléculas de agua ($H_2O$) y los de hidrógeno mediante iones $H^+$. A través de tres ejemplos prácticos con hierro, arsénico, estaño y permanganato, se demuestra paso a paso cómo igualar semirreacciones, balancear cargas con electrones y simplificar los componentes excedentes en ambos lados de la ecuación final.",
+        "youtubeId": "https://youtu.be/FEmGo0ICfrI"
+      },
+      {
+        "id": "leccion-1783219682055",
+        "title": "Balanceo REDOX: Método del Ión-Electrón en Medio Básico",
+        "description": "Este video detalla el método del ión-electrón para balancear ecuaciones redox en medio básico, caracterizado por el uso de iones hidroxilo ($OH^-$) y moléculas de agua ($H_2O$). A través de ejemplos prácticos, como la reacción en una batería de mercurio entre el zinc y el óxido de mercurio, se explica la regla para ajustar los oxígenos añadiendo el doble de $OH^-$ necesarios y compensando con agua en el lado opuesto, culminando con la igualación de cargas mediante electrones y la simplificación de los componentes repetidos.",
+        "youtubeId": "https://youtu.be/_NU2G4pcFrU"
+      },
+      {
+        "id": "leccion-1783219749653",
+        "title": "Reacciones de Desproporción y Redox Múltiple",
+        "description": "Este video aborda dos variantes complejas de óxido-reducción: las reacciones de desproporción, donde una misma especie química experimenta oxidación y reducción simultáneamente, detallando su balanceo mediante la duplicación algebraico-química del compuesto base; y el redox múltiple, fenómeno en el cual múltiples elementos cambian su estado de oxidación en una sola reacción. El contenido explica cómo agrupar estas interacciones en semirreacciones, calcular el intercambio neto total de electrones y aplicar ajustes estequiométricos finales por tanteo para asegurar el balance de masa y carga.",
+        "youtubeId": "https://youtu.be/6v_lKJ-dW8M"
+      },
+      {
+        "id": "leccion-1783219817261",
+        "title": "Propiedades y Estudio de los Gases",
+        "description": "Este video introduce el estado gaseoso, destacando características como la compresibilidad, la falta de forma definida y la adaptabilidad volumétrica al recipiente. Explica que el comportamiento físico y la presión de un gas dependen de la temperatura y de la velocidad de sus partículas, definiendo la presión como la fuerza ejercida por unidad de área. Asimismo, aborda el experimento histórico del barómetro de mercurio de Torricelli y establece las equivalencias fundamentales para realizar conversiones de unidades en el estudio de los gases.",
+        "youtubeId": "https://youtu.be/VnLZlhCTgfQ"
+      },
+      {
+        "id": "leccion-1783219863516",
+        "title": "Ley de Boyle: Presión y Volumen",
+        "description": "Este video explica la Ley de Boyle, la cual establece que el volumen de un gas es inversamente proporcional a su presión cuando la temperatura permanece constante. Detalla el uso de la fórmula matemática $P_1V_1 = P_2V_2$ para resolver problemas estequiométricos de gases, ilustrando el concepto mediante ejercicios prácticos paso a paso que requieren la conversión de unidades para hallar volúmenes y presiones finales, y concluye con un problema de práctica propuesto para el espectador.",
+        "youtubeId": "https://youtu.be/Lc6fxQke3Ig"
+      },
+      {
+        "id": "leccion-1783219909020",
+        "title": "Ley de Charles: Volumen y Temperatura",
+        "description": "Este video explica la Ley de Charles, la cual establece que el volumen de un gas es directamente proporcional a su temperatura absoluta en un proceso isobárico (a presión constante). Se detalla la importancia de convertir siempre la temperatura a la escala Kelvin mediante la suma de 273 a los grados Celsius, y se enseña a utilizar y despejar la fórmula matemática $\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$ a través de la resolución paso a paso de ejercicios prácticos con diferentes unidades de volumen y temperatura.",
+        "youtubeId": "https://youtu.be/zv5gmga4J_Y"
+      },
+      {
+        "id": "leccion-1783219955172",
+        "title": "Ley de Gay-Lussac: Presión y Temperatura",
+        "description": "Este video explica la Ley de Gay-Lussac, la cual establece que la presión de un gas es directamente proporcional a su temperatura absoluta en un proceso isocórico (a volumen constante), debido a que un aumento de temperatura acelera las partículas y multiplica sus choques contra el recipiente. Se detalla el uso de la fórmula $\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$ y sus respectivos despejes matemáticos, ilustrando el procedimiento mediante la resolución de un problema práctico con condiciones normales (TPN) que requiere la conversión de unidades de temperatura a Kelvin y de presión a Torr.",
+        "youtubeId": "https://youtu.be/TohHVBdHD1Q"
       }
     ]
   }
