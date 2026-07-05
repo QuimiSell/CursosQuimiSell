@@ -1,0 +1,46 @@
+[
+  {
+    "id": "curso-metodos-numericos",
+    "title": "Métodos Numéricos para Ingeniería",
+    "description": "Curso completo enfocado en la resolución numérica de problemas matemáticos complejos. Aprende métodos de bisección, Newton-Raphson, interpolación y resolución de ecuaciones diferenciales con aplicaciones prácticas.",
+    "lessons": [
+      {
+        "id": "leccion-biseccion",
+        "title": "1. Método de Bisección: Teoría y Práctica",
+        "description": "Introducción a los métodos cerrados para encontrar raíces. Analizaremos el teorema del valor medio, condiciones de convergencia y desarrollaremos el algoritmo de bisección paso a paso.",
+        "youtubeId": "dQw4w9WgXcQ"
+      },
+      {
+        "id": "leccion-newton-raphson",
+        "title": "2. Método de Newton-Raphson y Secante",
+        "description": "Estudio de métodos abiertos de rápida convergencia. Aprenderemos la deducción geométrica utilizando la derivada, la fórmula de recurrencia y el análisis de errores en puntos críticos.",
+        "youtubeId": "dQw4w9WgXcQ"
+      },
+      {
+        "id": "leccion-integracion-trapecio",
+        "title": "3. Integración Numérica: Regla del Trapecio y Simpson",
+        "description": "Cómo aproximar integrales definidas de funciones complejas o tabuladas. Implementación del trapecio simple, trapecio compuesto, regla de Simpson 1/3 y Simpson 3/8.",
+        "youtubeId": "dQw4w9WgXcQ"
+      }
+    ]
+  },
+  {
+    "id": "curso-quimica-general",
+    "title": "Principios de Química General",
+    "description": "Curso introductorio a las bases de la química. Cubre estequiometría, estructura atómica, enlaces químicos, termodinámica y equilibrio químico con ejercicios detallados.",
+    "lessons": [
+      {
+        "id": "leccion-estequiometria",
+        "title": "1. Balanceo de Ecuaciones y Estequiometría",
+        "description": "Aprende a balancear ecuaciones químicas por tanteo y redox. Resolveremos problemas de reactivo limitante, reactivo en exceso y porcentaje de rendimiento de reacción.",
+        "youtubeId": "dQw4w9WgXcQ"
+      },
+      {
+        "id": "leccion-estructura-atomica",
+        "title": "2. Estructura Atómica y Tabla Periódica",
+        "description": "Revisión histórica de los modelos atómicos y principios de la física cuántica (Schrödinger, de Broglie). Configuración electrónica y propiedades periódicas de los elementos.",
+        "youtubeId": "dQw4w9WgXcQ"
+      }
+    ]
+  }
+]
