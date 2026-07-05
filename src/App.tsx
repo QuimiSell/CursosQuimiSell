@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from './context/AuthContext';
 import { useCourses } from './hooks/useCourses';
 import { useAdminActions } from './hooks/useAdminActions';
+import { Course } from './types/course';
 
 // Importación de las vistas
 import { HomeView } from './views/HomeView';
