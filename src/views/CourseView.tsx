@@ -159,18 +159,40 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
           <main className="course-player-container">
             {selectedLesson ? (
               <>
-                {/* Contenedor del Reproductor con Efecto de Retroiluminación */}
-                <div className="video-player-wrapper">
-                  <div className="video-player-aspect">
-                    {selectedLesson.youtubeId ? (
-                      <iframe
-                        src={`https://www.youtube.com/embed/${extraerYoutubeId(selectedLesson.youtubeId)}?rel=0&autoplay=0`}
-                        title={selectedLesson.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        id="youtube-player"
-                      ></iframe>
-                    ) : (
+                {/* Contenedor de Previsualización y Enlace de YouTube */}
+                {selectedLesson.youtubeId ? (
+                  <a
+                    href={`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="video-player-wrapper interactive-preview"
+                    id="youtube-player"
+                  >
+                    <div className="video-player-aspect">
+                      <img
+                        src={`https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/maxresdefault.jpg`}
+                        onError={(e) => {
+                          e.currentTarget.src = `https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/mqdefault.jpg`;
+                        }}
+                        alt={selectedLesson.title}
+                        className="video-cover-image"
+                      />
+                      
+                      <div className="video-play-overlay">
+                        <div className="youtube-play-btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+                            <polygon points="6 3 20 12 6 21 6 3" />
+                          </svg>
+                        </div>
+                        <span className="play-text-hint">
+                          Reproducir clase en YouTube &rarr;
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                ) : (
+                  <div className="video-player-wrapper">
+                    <div className="video-player-aspect">
                       <div className="video-placeholder">
                         <div className="video-placeholder-icon">
                           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -180,9 +202,9 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                         <span style={{ fontWeight: 600 }}>Video no configurado</span>
                         <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>El administrador del curso aún no ha cargado el identificador de YouTube para esta clase.</span>
                       </div>
-                    )}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Controles de Navegación de Clases (Anterior / Siguiente) */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
@@ -211,32 +233,29 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
 
                 {/* Ficha de Detalles de la Clase */}
                 <div className="video-info-card" id={`lesson-info-${selectedLesson.id}`}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '1.2rem' }}>
-                    <h3 className="video-info-title" style={{ margin: 0 }}>{selectedLesson.title}</h3>
-                    {selectedLesson.youtubeId && (
-                      <a
-                        href={`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-secondary"
-                        style={{
-                          padding: '0.5rem 1rem',
-                          fontSize: '0.85rem',
-                          gap: '0.4rem',
-                          border: '1px solid rgba(239, 68, 68, 0.3)',
-                          backgroundColor: 'rgba(239, 68, 68, 0.05)',
-                          color: '#fca5a5'
-                        }}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#ef4444' }}>
-                          <path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.098C19.53 3.53 12 3.53 12 3.53s-7.53 0-9.399.497c-1.025.272-1.827 1.076-2.1 2.098C0 8.033 0 12 0 12s0 3.967.502 5.837c.272 1.022 1.074 1.826 2.099 2.098C6.47 20.47 12 20.47 12 20.47s7.53 0 9.399-.497c1.025-.272 1.827-1.076 2.1-2.098C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                        Ver en YouTube
-                      </a>
-                    )}
-                  </div>
-                  <div className="video-info-description">
+                  <h3 className="video-info-title" style={{ marginBottom: '1.2rem' }}>{selectedLesson.title}</h3>
+                  <div className="video-info-description" style={{ marginBottom: '1.8rem' }}>
                     {selectedLesson.description || 'No hay notas ni descripción detallada disponible para esta clase.'}
+                  </div>
+                  
+                  {/* Banner de soporte de YouTube */}
+                  <div style={{
+                    border: '1px dashed rgba(239, 68, 68, 0.25)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.03)',
+                    borderRadius: 'var(--radius-md)',
+                    padding: '1.2rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1rem',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-secondary)'
+                  }}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#ef4444', flexShrink: 0 }}>
+                      <path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.098C19.53 3.53 12 3.53 12 3.53s-7.53 0-9.399.497c-1.025.272-1.827 1.076-2.1 2.098C0 8.033 0 12 0 12s0 3.967.502 5.837c.272 1.022 1.074 1.826 2.099 2.098C6.47 20.47 12 20.47 12 20.47s7.53 0 9.399-.497c1.025-.272 1.827-1.076 2.1-2.098C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <div>
+                      <strong>¡Apoya a QuimiSell en YouTube!</strong> Al ver el video en YouTube nos ayudas a acumular horas de reproducción. Deja tu me gusta, haz tus preguntas en los comentarios y suscríbete para apoyarnos a seguir creando contenido gratuito.
+                    </div>
                   </div>
                 </div>
               </>
