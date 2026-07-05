@@ -58,6 +58,7 @@ export const useCourses = () => {
     courses,
     loading,
     error,
+    actualizarCursosLocales: setCourses,
     refrescarCursos: obtenerCursos,
   };
 };

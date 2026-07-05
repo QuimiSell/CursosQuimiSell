@@ -22,16 +22,25 @@ function App() {
   const { isAuthenticated, logout } = useAuth();
   
   // Consumo de datos públicos
-  const { courses, loading, error, refrescarCursos } = useCourses();
+  const { courses, loading, error, actualizarCursosLocales, refrescarCursos } = useCourses();
   
   // Acciones de administración
   const {
-    guardarCursos,
+    guardarCursos: guardarCursosGitHub,
     guardando,
     error: errorGuardado,
     exito: exitoGuardado,
     limpiarEstado: limpiarEstadoAdmin,
   } = useAdminActions();
+
+  // Función puente que sincroniza tanto el repositorio remoto (GitHub) como la interfaz de usuario local al instante
+  const guardarCursos = async (nuevosCursos: Course[]) => {
+    const exito = await guardarCursosGitHub(nuevosCursos);
+    if (exito) {
+      actualizarCursosLocales(nuevosCursos);
+    }
+    return exito;
+  };
 
   // Estado del Enrutador Personalizado
   const [vista, setVista] = useState<ActiveView>({ type: 'home' });
