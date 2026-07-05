@@ -199,6 +199,32 @@ function App() {
       <main className="main-content">
         {renderizarVista()}
       </main>
+
+      {/* Pie de Página (Footer) Global */}
+      <footer style={{
+        marginTop: 'auto',
+        borderTop: '1px solid var(--border-color)',
+        padding: '2rem 1rem',
+        textAlign: 'center',
+        color: 'var(--text-muted)',
+        fontSize: '0.88rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.5rem',
+        background: 'rgba(3, 7, 18, 0.2)'
+      }}>
+        <div>
+          &copy; {new Date().getFullYear()} <strong>QuimiSell Cursos</strong>. Todos los derechos reservados.
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', color: 'var(--text-secondary)', flexWrap: 'wrap' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: 'var(--primary-accent)', flexShrink: 0 }}>
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>¿Tienes dudas o consultas? Escríbenos a:</span>
+          <a href="mailto:quimicabless2020@gmail.com" style={{ color: 'var(--secondary-accent)', textDecoration: 'none', fontWeight: 700 }}>quimicabless2020@gmail.com</a>
+        </div>
+      </footer>
     </div>
   );
 }

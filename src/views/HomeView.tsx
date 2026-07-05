@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Course } from '../types/course';
 
 interface HomeViewProps {
@@ -9,6 +9,37 @@ interface HomeViewProps {
   onNavigateToLogin: () => void;
 }
 
+// Función auxiliar para clasificar los cursos por categorías de forma dinámica (si no está definida en la base de datos)
+const obtenerCategoriaCurso = (c: Course): string => {
+  if (c.category) return c.category;
+  const titleL = c.title.toLowerCase();
+  if (titleL.includes('química') || titleL.includes('quimica')) return 'Química';
+  if (
+    titleL.includes('matemát') ||
+    titleL.includes('matemat') ||
+    titleL.includes('método') ||
+    titleL.includes('metodo') ||
+    titleL.includes('cálculo') ||
+    titleL.includes('calculo') ||
+    titleL.includes('algebra') ||
+    titleL.includes('álgebra')
+  ) {
+    return 'Matemáticas';
+  }
+  if (
+    titleL.includes('progra') ||
+    titleL.includes('android') ||
+    titleL.includes('electron') ||
+    titleL.includes('javascript') ||
+    titleL.includes('python') ||
+    titleL.includes('html') ||
+    titleL.includes('css')
+  ) {
+    return 'Programación';
+  }
+  return 'Otros';
+};
+
 export const HomeView: React.FC<HomeViewProps> = ({
   courses,
   loading,
@@ -16,6 +47,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
   onSelectCourse,
   onNavigateToLogin,
 }) => {
+  const [busqueda, setBusqueda] = useState<string>('');
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState<string>('Todos');
+
   if (loading) {
     return (
       <div className="loading-container" id="loading-home">
@@ -29,6 +63,26 @@ export const HomeView: React.FC<HomeViewProps> = ({
   // Cálculos estadísticos para mostrar en la interfaz
   const totalCursos = courses.length;
   const totalLecciones = courses.reduce((acc, c) => acc + (c.lessons ? c.lessons.length : 0), 0);
+
+  // Filtrado de cursos dinámico por Categoría y Palabra Clave (Título del curso, Descripción del curso o Clases)
+  const queryL = busqueda.trim().toLowerCase();
+  const cursosFiltrados = courses.filter((course) => {
+    // 1. Filtro por categoría
+    const categoriaCurso = obtenerCategoriaCurso(course);
+    const matchesCategory = categoriaSeleccionada === 'Todos' || categoriaCurso === categoriaSeleccionada;
+    if (!matchesCategory) return false;
+
+    // 2. Filtro por búsqueda de texto
+    if (queryL === '') return true;
+
+    const matchesCourseTitle = course.title.toLowerCase().includes(queryL);
+    const matchesCourseDesc = course.description.toLowerCase().includes(queryL);
+    const matchesLessons = course.lessons && course.lessons.some(
+      (l) => l.title.toLowerCase().includes(queryL) || l.description.toLowerCase().includes(queryL)
+    );
+
+    return matchesCourseTitle || matchesCourseDesc || matchesLessons;
+  });
 
   return (
     <div className="home-view-container">
@@ -108,24 +162,153 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       )}
 
-      {!error && courses.length === 0 && (
-        <div className="alert alert-warning" id="empty-home">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          No hay cursos cargados en la base de datos de GitHub. Si eres administrador, inicia sesión para añadir contenido.
+      {/* Barra de Búsqueda y Filtros de Categorías */}
+      {!error && (
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1.5rem',
+          margin: '2.5rem 0',
+          background: 'rgba(11, 17, 32, 0.45)',
+          border: '1px solid var(--border-color)',
+          borderRadius: 'var(--radius-lg)',
+          padding: '1.5rem',
+          backdropFilter: 'blur(8px)',
+          boxShadow: 'var(--shadow-md)'
+        }}>
+          {/* Campo de Búsqueda con Icono */}
+          <div style={{ position: 'relative', width: '100%' }}>
+            <span style={{
+              position: 'absolute',
+              left: '1.2rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              color: 'var(--text-muted)',
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input
+              type="text"
+              placeholder="Buscar por curso, tema o palabras en clases (ej: REDOX, Boyle, Android, Bisección)..."
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '0.9rem 1.2rem 0.9rem 3.2rem',
+                backgroundColor: 'rgba(3, 7, 18, 0.45)',
+                border: '1px solid var(--border-color)',
+                borderRadius: 'var(--radius-md)',
+                color: '#fff',
+                fontSize: '1rem',
+                outline: 'none',
+                boxSizing: 'border-box',
+                transition: 'border-color 0.2s',
+                fontFamily: 'inherit'
+              }}
+              onFocus={(e) => e.target.style.borderColor = 'var(--primary-accent)'}
+              onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'}
+            />
+            {busqueda && (
+              <button
+                onClick={() => setBusqueda('')}
+                style={{
+                  position: 'absolute',
+                  right: '1.2rem',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  color: 'var(--text-muted)',
+                  cursor: 'pointer',
+                  fontSize: '1.1rem',
+                  fontWeight: 'bold',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)'
+                }}
+              >
+                ✕
+              </button>
+            )}
+          </div>
+
+          {/* Selector de Categorías (Pills) */}
+          <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginRight: '0.5rem', fontWeight: 600 }}>Filtrar por:</span>
+            {['Todos', 'Química', 'Matemáticas', 'Programación', 'Otros'].map((cat) => {
+              const active = categoriaSeleccionada === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setCategoriaSeleccionada(cat)}
+                  style={{
+                    padding: '0.5rem 1.2rem',
+                    borderRadius: 'var(--radius-full)',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    border: '1px solid',
+                    borderColor: active ? 'var(--primary-accent)' : 'var(--border-color)',
+                    backgroundColor: active ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+                    color: active ? '#c7d2fe' : 'var(--text-secondary)',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    fontFamily: 'inherit'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!active) {
+                      e.currentTarget.style.borderColor = 'var(--border-hover)';
+                      e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!active) {
+                      e.currentTarget.style.borderColor = 'var(--border-color)';
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.02)';
+                    }
+                  }}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
 
       {/* Grid de Cursos */}
       <div className="courses-grid">
-        {courses.map((course) => {
+        {cursosFiltrados.map((course) => {
           const numLecciones = course.lessons ? course.lessons.length : 0;
-          // Asigna un tag temático según el título
-          const esQuimica = course.title.toLowerCase().includes('química') || course.title.toLowerCase().includes('quimica');
-          const tagTexto = esQuimica ? 'Química' : 'Matemáticas / Métodos';
+          const categoria = obtenerCategoriaCurso(course);
+
+          // Buscar cuántas lecciones individuales coinciden con la palabra de búsqueda
+          let clasesCoincidentes = 0;
+          if (queryL !== '' && course.lessons) {
+            clasesCoincidentes = course.lessons.filter(
+              (l) => l.title.toLowerCase().includes(queryL) || l.description.toLowerCase().includes(queryL)
+            ).length;
+          }
+
+          // Estilo de etiqueta dinámico por categoría
+          let tagStyle = {};
+          if (categoria === 'Química') {
+            tagStyle = { backgroundColor: 'rgba(6, 182, 212, 0.1)', color: '#a5f3fc', borderColor: 'rgba(6, 182, 212, 0.2)' };
+          } else if (categoria === 'Matemáticas') {
+            tagStyle = { backgroundColor: 'rgba(99, 102, 241, 0.1)', color: '#c7d2fe', borderColor: 'rgba(99, 102, 241, 0.2)' };
+          } else if (categoria === 'Programación') {
+            tagStyle = { backgroundColor: 'rgba(16, 185, 129, 0.1)', color: '#a7f3d0', borderColor: 'rgba(16, 185, 129, 0.2)' };
+          } else {
+            tagStyle = { backgroundColor: 'rgba(156, 163, 175, 0.1)', color: '#f3f4f6', borderColor: 'rgba(156, 163, 175, 0.2)' };
+          }
 
           return (
             <div
@@ -135,8 +318,23 @@ export const HomeView: React.FC<HomeViewProps> = ({
               id={`course-card-${course.id}`}
             >
               <div>
-                <div className="course-card-tag" style={esQuimica ? { backgroundColor: 'rgba(6, 182, 212, 0.1)', color: '#a5f3fc', borderColor: 'rgba(6, 182, 212, 0.2)' } : {}}>
-                  {tagTexto}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  <div className="course-card-tag" style={{ ...tagStyle, marginBottom: 0 }}>
+                    {categoria}
+                  </div>
+                  {clasesCoincidentes > 0 && (
+                    <span style={{
+                      fontSize: '0.75rem',
+                      color: 'var(--secondary-accent)',
+                      fontWeight: 700,
+                      backgroundColor: 'rgba(6, 182, 212, 0.08)',
+                      border: '1px solid rgba(6, 182, 212, 0.15)',
+                      padding: '0.2rem 0.6rem',
+                      borderRadius: 'var(--radius-full)'
+                    }}>
+                      🔍 {clasesCoincidentes} {clasesCoincidentes === 1 ? 'lección coincide' : 'lecciones coinciden'}
+                    </span>
+                  )}
                 </div>
                 <h3 className="course-title">{course.title}</h3>
                 <p className="course-description">{course.description}</p>
@@ -164,6 +362,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
           );
         })}
+
+        {cursosFiltrados.length === 0 && !error && (
+          <div className="alert alert-warning" style={{ margin: '2rem 0', width: '100%', gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: '0.8rem' }} id="no-results-home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0 }}>
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <div>
+              No se encontraron cursos o temas que coincidan con la búsqueda <strong>"{busqueda}"</strong> en la categoría <strong>"{categoriaSeleccionada}"</strong>.
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

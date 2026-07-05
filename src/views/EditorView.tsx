@@ -35,6 +35,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
 }) => {
   const [tituloCurso, setTituloCurso] = useState<string>(course.title);
   const [descripcionCurso, setDescripcionCurso] = useState<string>(course.description);
+  const [categoriaCurso, setCategoriaCurso] = useState<string>(course.category || 'Otros');
   const [lecciones, setLecciones] = useState<Lesson[]>(course.lessons || []);
 
   const [editandoLeccionId, setEditandoLeccionId] = useState<string | null>(null);
@@ -48,6 +49,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
   useEffect(() => {
     setTituloCurso(course.title);
     setDescripcionCurso(course.description);
+    setCategoriaCurso(course.category || 'Otros');
     setLecciones(course.lessons || []);
     limpiarFormularioLeccion();
   }, [course]);
@@ -172,6 +174,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
       ...course,
       title: tituloCurso.trim(),
       description: descripcionCurso.trim(),
+      category: categoriaCurso,
       lessons: lecciones,
     };
 
@@ -269,7 +272,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
                 disabled={guardando}
               />
             </div>
-            <div className="form-group" style={{ marginBottom: 0 }}>
+            <div className="form-group">
               <label className="form-label" htmlFor="edit-course-desc">Descripción General</label>
               <textarea
                 id="edit-course-desc"
@@ -278,6 +281,22 @@ export const EditorView: React.FC<EditorViewProps> = ({
                 onChange={(e) => setDescripcionCurso(e.target.value)}
                 disabled={guardando}
               ></textarea>
+            </div>
+            <div className="form-group" style={{ marginBottom: 0 }}>
+              <label className="form-label" htmlFor="edit-course-category">Categoría / Género</label>
+              <select
+                id="edit-course-category"
+                className="form-input"
+                value={categoriaCurso}
+                onChange={(e) => setCategoriaCurso(e.target.value)}
+                disabled={guardando}
+                style={{ backgroundColor: 'rgba(3, 7, 18, 0.45)', color: '#fff' }}
+              >
+                <option value="Química">Química</option>
+                <option value="Matemáticas">Matemáticas</option>
+                <option value="Programación">Programación</option>
+                <option value="Otros">Otros</option>
+              </select>
             </div>
           </div>
 

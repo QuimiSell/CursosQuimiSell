@@ -9,5 +9,6 @@ export interface Course {
   id: string;
   title: string;
   description: string;
+  category?: string;
   lessons: Lesson[];
 }
