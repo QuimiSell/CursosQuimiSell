@@ -167,6 +167,10 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                     rel="noopener noreferrer"
                     className="video-player-wrapper interactive-preview"
                     id="youtube-player"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open(`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`, '_blank', 'noopener,noreferrer');
+                    }}
                   >
                     <div className="video-player-aspect">
                       <img
