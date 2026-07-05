@@ -14,6 +14,11 @@ const extraerYoutubeId = (urlOId: string): string => {
   return (match && match[2].length === 11) ? match[2] : limpio;
 };
 
+interface CourseViewProps {
+  course: Course;
+  onBackToHome: () => void;
+}
+
 export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) => {
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
