@@ -164,10 +164,7 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                   <div className="video-player-wrapper" id="youtube-player">
                     <div className="video-player-aspect">
                       <img
-                        src={`https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/maxresdefault.jpg`}
-                        onError={(e) => {
-                          e.currentTarget.src = `https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/mqdefault.jpg`;
-                        }}
+                        src={`https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/hqdefault.jpg`}
                         alt={selectedLesson.title}
                         style={{
                           position: 'absolute',
