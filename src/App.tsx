@@ -180,7 +180,7 @@ function App() {
               onClick={() => setVista({ type: 'login' })}
               id="nav-login"
             >
-              Iniciar Sesión
+              Acceso Admin
             </button>
           )}
         </nav>

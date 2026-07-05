@@ -86,13 +86,50 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                       className={`lesson-item ${isActive ? 'active' : ''}`}
                       onClick={() => setSelectedLesson(lesson)}
                       id={`lesson-btn-${lesson.id}`}
+                      style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}
                     >
-                      <span className="lesson-number">{index + 1}</span>
-                      <div className="lesson-info" style={{ flexGrow: 1 }}>
-                        <span className="lesson-info-title">{lesson.title}</span>
+                      <div style={{ position: 'relative', width: '80px', height: '48px', flexShrink: 0, borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
+                        {lesson.youtubeId ? (
+                          <img
+                            src={`https://img.youtube.com/vi/${lesson.youtubeId}/mqdefault.jpg`}
+                            alt=""
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          />
+                        ) : (
+                          <div style={{ width: '100%', height: '100%', backgroundColor: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: 'var(--text-muted)' }}>
+                              <path d="M23 7l-7 5 7 5V7z" />
+                              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                            </svg>
+                          </div>
+                        )}
+                        <div style={{
+                          position: 'absolute',
+                          bottom: '2px',
+                          right: '2px',
+                          backgroundColor: 'rgba(0, 0, 0, 0.85)',
+                          color: '#fff',
+                          fontSize: '0.7rem',
+                          fontWeight: 800,
+                          padding: '1px 4px',
+                          borderRadius: '3px',
+                          lineHeight: 1
+                        }}>
+                          {index + 1}
+                        </div>
+                      </div>
+                      <div className="lesson-info" style={{ flexGrow: 1, minWidth: 0 }}>
+                        <span className="lesson-info-title" style={{
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          fontSize: '0.9rem'
+                        }}>{lesson.title}</span>
                       </div>
                       {isActive && (
-                        <span style={{ color: 'var(--primary-accent)', display: 'flex', alignItems: 'center' }}>
+                        <span style={{ color: 'var(--primary-accent)', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                             <polygon points="5 3 19 12 5 21 5 3" />
                           </svg>
@@ -161,7 +198,30 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
 
                 {/* Ficha de Detalles de la Clase */}
                 <div className="video-info-card" id={`lesson-info-${selectedLesson.id}`}>
-                  <h3 className="video-info-title">{selectedLesson.title}</h3>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '1.2rem' }}>
+                    <h3 className="video-info-title" style={{ margin: 0 }}>{selectedLesson.title}</h3>
+                    {selectedLesson.youtubeId && (
+                      <a
+                        href={`https://www.youtube.com/watch?v=${selectedLesson.youtubeId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-secondary"
+                        style={{
+                          padding: '0.5rem 1rem',
+                          fontSize: '0.85rem',
+                          gap: '0.4rem',
+                          border: '1px solid rgba(239, 68, 68, 0.3)',
+                          backgroundColor: 'rgba(239, 68, 68, 0.05)',
+                          color: '#fca5a5'
+                        }}
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#ef4444' }}>
+                          <path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.098C19.53 3.53 12 3.53 12 3.53s-7.53 0-9.399.497c-1.025.272-1.827 1.076-2.1 2.098C0 8.033 0 12 0 12s0 3.967.502 5.837c.272 1.022 1.074 1.826 2.099 2.098C6.47 20.47 12 20.47 12 20.47s7.53 0 9.399-.497c1.025-.272 1.827-1.076 2.1-2.098C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        Ver en YouTube
+                      </a>
+                    )}
+                  </div>
                   <div className="video-info-description">
                     {selectedLesson.description || 'No hay notas ni descripción detallada disponible para esta clase.'}
                   </div>

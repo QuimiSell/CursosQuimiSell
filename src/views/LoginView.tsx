@@ -79,6 +79,18 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLoginSuccess, onBackToHo
           <p className="login-subtitle">Introduce las credenciales de GitHub para administrar los cursos.</p>
         </div>
 
+        {/* Mensaje aclaratorio para los estudiantes (UX) */}
+        <div className="alert alert-warning" style={{ fontSize: '0.88rem', margin: '0.5rem 0 1.8rem 0', display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0, marginTop: '2px' }}>
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div>
+            <strong>¿Eres estudiante?</strong> No necesitas iniciar sesión. Puedes acceder y reproducir todas las lecciones de forma gratuita desde la pestaña <strong>Catálogo</strong> en el menú superior. Este panel es exclusivo para el administrador.
+          </div>
+        </div>
+
         {errorLocal && (
           <div className="alert alert-danger" id="login-error">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
