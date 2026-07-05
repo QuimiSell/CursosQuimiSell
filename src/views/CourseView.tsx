@@ -285,17 +285,63 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                     borderRadius: 'var(--radius-md)',
                     padding: '1.2rem',
                     display: 'flex',
+                    flexDirection: 'row',
                     alignItems: 'center',
-                    gap: '1rem',
+                    justifyContent: 'space-between',
+                    gap: '1.5rem',
+                    flexWrap: 'wrap',
                     fontSize: '0.9rem',
                     color: 'var(--text-secondary)'
                   }}>
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#ef4444', flexShrink: 0 }}>
-                      <path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.098C19.53 3.53 12 3.53 12 3.53s-7.53 0-9.399.497c-1.025.272-1.827 1.076-2.1 2.098C0 8.033 0 12 0 12s0 3.967.502 5.837c.272 1.022 1.074 1.826 2.099 2.098C6.47 20.47 12 20.47 12 20.47s7.53 0 9.399-.497c1.025-.272 1.827-1.076 2.1-2.098C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                    <div>
-                      <strong>¡Apoya a QuimiSell en YouTube!</strong> Al ver el video en YouTube nos ayudas a acumular horas de reproducción. Deja tu me gusta, haz tus preguntas en los comentarios y suscríbete para apoyarnos a seguir creando contenido gratuito.
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: '1 1 300px' }}>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#ef4444', flexShrink: 0 }}>
+                        <path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.098C19.53 3.53 12 3.53 12 3.53s-7.53 0-9.399.497c-1.025.272-1.827 1.076-2.1 2.098C0 8.033 0 12 0 12s0 3.967.502 5.837c.272 1.022 1.074 1.826 2.099 2.098C6.47 20.47 12 20.47 12 20.47s7.53 0 9.399-.497c1.025-.272 1.827-1.076 2.1-2.098C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                      </svg>
+                      <div>
+                        <strong>¡Apoya a QuimiSell en YouTube!</strong> Al ver el video en YouTube nos ayudas a acumular horas de reproducción. Deja tu me gusta, haz tus preguntas en los comentarios y suscríbete para apoyarnos a seguir creando contenido gratuito.
+                      </div>
                     </div>
+
+                    {selectedLesson.youtubeId && (
+                      <a
+                        href={`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                        style={{
+                          padding: '0.7rem 1.4rem',
+                          fontSize: '0.85rem',
+                          fontWeight: 700,
+                          backgroundColor: '#ef4444',
+                          color: '#ffffff',
+                          borderRadius: 'var(--radius-md)',
+                          textDecoration: 'none',
+                          whiteSpace: 'nowrap',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.5rem',
+                          boxShadow: '0 4px 12px rgba(239, 68, 68, 0.25)',
+                          transition: 'all 0.2s ease',
+                          cursor: 'pointer',
+                          border: '1px solid #dc2626'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.opacity = '0.9';
+                          e.currentTarget.style.transform = 'translateY(-1px)';
+                          e.currentTarget.style.boxShadow = '0 6px 16px rgba(239, 68, 68, 0.35)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.opacity = '1';
+                          e.currentTarget.style.transform = 'none';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(239, 68, 68, 0.25)';
+                        }}
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.098C19.53 3.53 12 3.53 12 3.53s-7.53 0-9.399.497c-1.025.272-1.827 1.076-2.1 2.098C0 8.033 0 12 0 12s0 3.967.502 5.837c.272 1.022 1.074 1.826 2.099 2.098C6.47 20.47 12 20.47 12 20.47s7.53 0 9.399-.497c1.025-.272 1.827-1.076 2.1-2.098C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        Ver Video en YouTube
+                      </a>
+                    )}
                   </div>
                 </div>
               </>
