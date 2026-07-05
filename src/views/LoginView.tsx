@@ -210,7 +210,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLoginSuccess, onBackToHo
             >
               {verificando ? (
                 <>
-                  <div className="spinner" style={{ width: '18px', height: '18px', borderThickness: '2px', borderTopColor: '#fff', boxShadow: 'none' }}></div>
+                  <div className="spinner" style={{ width: '18px', height: '18px', borderWidth: '2px', borderTopColor: '#fff', boxShadow: 'none' }}></div>
                   Estableciendo Enlace GitHub...
                 </>
               ) : (
