@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Course, Lesson } from '../types/course';
 
+// Función auxiliar para extraer el ID de 11 caracteres de cualquier formato de URL de YouTube
+const extraerYoutubeId = (urlOId: string): string => {
+  if (!urlOId) return '';
+  const limpio = urlOId.trim();
+  // Si ya es un ID de 11 caracteres sin diagonales ni caracteres de query
+  if (limpio.length === 11 && !limpio.includes('/') && !limpio.includes('?') && !limpio.includes('=')) {
+    return limpio;
+  }
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|live\/)([^#\&\?]*).*/;
+  const match = limpio.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : limpio;
+};
+
 interface EditorViewProps {
   course: Course;
   courses: Course[];
@@ -61,6 +74,8 @@ export const EditorView: React.FC<EditorViewProps> = ({
       return;
     }
 
+    const idLimpio = extraerYoutubeId(youtubeIdLeccion);
+
     if (editandoLeccionId) {
       const leccionesActualizadas = lecciones.map((l) =>
         l.id === editandoLeccionId
@@ -68,7 +83,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
               ...l,
               title: tituloLeccion.trim(),
               description: descripcionLeccion.trim(),
-              youtubeId: youtubeIdLeccion.trim(),
+              youtubeId: idLimpio,
             }
           : l
       );
@@ -78,7 +93,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
         id: `leccion-${Date.now()}`,
         title: tituloLeccion.trim(),
         description: descripcionLeccion.trim(),
-        youtubeId: youtubeIdLeccion.trim(),
+        youtubeId: idLimpio,
       };
       setLecciones([...lecciones, nuevaLeccion]);
     }
@@ -164,7 +179,8 @@ export const EditorView: React.FC<EditorViewProps> = ({
     await guardarCursos(nuevosCursos);
   };
 
-  const esValidoYoutubeId = youtubeIdLeccion.trim().length === 11;
+  const youtubeIdExtraido = extraerYoutubeId(youtubeIdLeccion);
+  const esValidoYoutubeId = youtubeIdExtraido.length === 11;
 
   return (
     <div className="editor-view-container">
@@ -318,7 +334,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
                 {esValidoYoutubeId && (
                   <div className="video-preview-box">
                     <img
-                      src={`https://img.youtube.com/vi/${youtubeIdLeccion.trim()}/mqdefault.jpg`}
+                      src={`https://img.youtube.com/vi/${youtubeIdExtraido}/mqdefault.jpg`}
                       alt="Previsualización de YouTube"
                       className="video-preview-thumb"
                     />
@@ -327,7 +343,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
                         <span style={{ width: '6px', height: '6px', backgroundColor: 'var(--success)', borderRadius: '50%' }}></span>
                         Miniatura Encontrada
                       </span>
-                      <span style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>ID: {youtubeIdLeccion.trim()}</span>
+                      <span style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>ID: {youtubeIdExtraido}</span>
                     </div>
                   </div>
                 )}

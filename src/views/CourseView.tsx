@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Course, Lesson } from '../types/course';
 
-interface CourseViewProps {
-  course: Course;
-  onBackToHome: () => void;
-}
+// Función auxiliar para extraer el ID de 11 caracteres de cualquier formato de URL de YouTube
+const extraerYoutubeId = (urlOId: string): string => {
+  if (!urlOId) return '';
+  const limpio = urlOId.trim();
+  // Si ya es un ID de 11 caracteres sin diagonales ni caracteres de query
+  if (limpio.length === 11 && !limpio.includes('/') && !limpio.includes('?') && !limpio.includes('=')) {
+    return limpio;
+  }
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|live\/)([^#\&\?]*).*/;
+  const match = limpio.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : limpio;
+};
 
 export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) => {
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
@@ -91,7 +99,7 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                       <div style={{ position: 'relative', width: '80px', height: '48px', flexShrink: 0, borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
                         {lesson.youtubeId ? (
                           <img
-                            src={`https://img.youtube.com/vi/${lesson.youtubeId}/mqdefault.jpg`}
+                            src={`https://img.youtube.com/vi/${extraerYoutubeId(lesson.youtubeId)}/mqdefault.jpg`}
                             alt=""
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           />
@@ -151,7 +159,7 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                   <div className="video-player-aspect">
                     {selectedLesson.youtubeId ? (
                       <iframe
-                        src={`https://www.youtube.com/embed/${selectedLesson.youtubeId}?rel=0&autoplay=0`}
+                        src={`https://www.youtube.com/embed/${extraerYoutubeId(selectedLesson.youtubeId)}?rel=0&autoplay=0`}
                         title={selectedLesson.title}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -202,7 +210,7 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                     <h3 className="video-info-title" style={{ margin: 0 }}>{selectedLesson.title}</h3>
                     {selectedLesson.youtubeId && (
                       <a
-                        href={`https://www.youtube.com/watch?v=${selectedLesson.youtubeId}`}
+                        href={`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-secondary"
