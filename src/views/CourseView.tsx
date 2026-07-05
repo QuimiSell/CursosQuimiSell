@@ -161,17 +161,7 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
               <>
                 {/* Contenedor de Previsualización y Enlace de YouTube */}
                 {selectedLesson.youtubeId ? (
-                  <a
-                    href={`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="video-player-wrapper interactive-preview"
-                    id="youtube-player"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open(`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`, '_blank', 'noopener,noreferrer');
-                    }}
-                  >
+                  <div className="video-player-wrapper" id="youtube-player">
                     <div className="video-player-aspect">
                       <img
                         src={`https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/maxresdefault.jpg`}
@@ -179,21 +169,67 @@ export const CourseView: React.FC<CourseViewProps> = ({ course, onBackToHome }) 
                           e.currentTarget.src = `https://img.youtube.com/vi/${extraerYoutubeId(selectedLesson.youtubeId)}/mqdefault.jpg`;
                         }}
                         alt={selectedLesson.title}
-                        className="video-cover-image"
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover'
+                        }}
                       />
                       
-                      <div className="video-play-overlay">
-                        <div className="youtube-play-btn">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+                      {/* Capa oscura superpuesta y el gran botón de enlace real */}
+                      <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(3, 7, 18, 0.45)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 2
+                      }}>
+                        <a
+                          href={`https://www.youtube.com/watch?v=${extraerYoutubeId(selectedLesson.youtubeId)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary"
+                          style={{
+                            padding: '1.2rem 2.4rem',
+                            fontSize: '1.15rem',
+                            fontWeight: 800,
+                            backgroundColor: '#ef4444',
+                            borderColor: '#dc2626',
+                            boxShadow: '0 10px 25px rgba(239, 68, 68, 0.4)',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.8rem',
+                            textDecoration: 'none',
+                            transition: 'all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                            cursor: 'pointer'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = '#ff0000';
+                            e.currentTarget.style.transform = 'scale(1.06)';
+                            e.currentTarget.style.boxShadow = '0 12px 30px rgba(255, 0, 0, 0.6)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = '#ef4444';
+                            e.currentTarget.style.transform = 'none';
+                            e.currentTarget.style.boxShadow = '0 10px 25px rgba(239, 68, 68, 0.4)';
+                          }}
+                        >
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))' }}>
                             <polygon points="6 3 20 12 6 21 6 3" />
                           </svg>
-                        </div>
-                        <span className="play-text-hint">
-                          Reproducir clase en YouTube &rarr;
-                        </span>
+                          Ver Clase en YouTube
+                        </a>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 ) : (
                   <div className="video-player-wrapper">
                     <div className="video-player-aspect">
