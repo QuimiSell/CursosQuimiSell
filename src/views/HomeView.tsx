@@ -14,6 +14,7 @@ const obtenerCategoriaCurso = (c: Course): string => {
   if (c.category) return c.category;
   const titleL = c.title.toLowerCase();
   if (titleL.includes('química') || titleL.includes('quimica')) return 'Química';
+  if (titleL.includes('biología') || titleL.includes('biologia')) return 'Biología';
   if (
     titleL.includes('matemát') ||
     titleL.includes('matemat') ||
@@ -242,7 +243,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           {/* Selector de Categorías (Pills) */}
           <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', alignItems: 'center' }}>
             <span style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginRight: '0.5rem', fontWeight: 600 }}>Filtrar por:</span>
-            {['Todos', 'Química', 'Matemáticas', 'Programación', 'Otros'].map((cat) => {
+            {['Todos', 'Química', 'Biología', 'Matemáticas', 'Programación', 'Otros'].map((cat) => {
               const active = categoriaSeleccionada === cat;
               return (
                 <button

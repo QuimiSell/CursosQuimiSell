@@ -293,6 +293,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
                 style={{ backgroundColor: 'rgba(3, 7, 18, 0.45)', color: '#fff' }}
               >
                 <option value="Química">Química</option>
+                <option value="Biología">Biología</option>
                 <option value="Matemáticas">Matemáticas</option>
                 <option value="Programación">Programación</option>
                 <option value="Otros">Otros</option>
