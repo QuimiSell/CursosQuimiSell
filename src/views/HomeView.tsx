@@ -17,8 +17,6 @@ const obtenerCategoriaCurso = (c: Course): string => {
   if (
     titleL.includes('matemát') ||
     titleL.includes('matemat') ||
-    titleL.includes('método') ||
-    titleL.includes('metodo') ||
     titleL.includes('cálculo') ||
     titleL.includes('calculo') ||
     titleL.includes('algebra') ||
