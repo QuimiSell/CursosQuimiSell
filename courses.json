@@ -256,6 +256,60 @@
         "title": "Cinética Química: Ecuaciones Integradas y Vida Media",
         "description": "Este video presenta la resolución de ejercicios del texto de Brown enfocados en la variación de la concentración (o presión parcial) respecto al tiempo y los cálculos de vida media en cinéticas de primer orden. El contenido detalla el uso de las ecuaciones integradas de velocidad para despejar la constante $k$, determinar la vida media ($t_{1/2} = \\frac{\\ln 2}{k}$), calcular la cantidad de moles o concentración remanente tras un intervalo específico, y evaluar el tiempo requerido para que un reactivo se reduzca a una fracción determinada de su valor inicial.",
         "youtubeId": "CALitVZPl8Y"
+      },
+      {
+        "id": "leccion-1783305382953",
+        "title": "Cinética Química: Teoría de Colisiones y Energía de Activación",
+        "description": "Este video explica los fundamentos teóricos de la cinética química y las condiciones necesarias para que ocurra una transformación molecular. El contenido detalla los principios de la teoría de colisiones—enfatizando la importancia de la energía y la orientación geométrica de las partículas—, define el concepto de energía de activación como la barrera energética indispensable para alcanzar el complejo activado, y analiza cómo los catalizadores positivos y los inhibidores modifican la velocidad de una reacción química sin consumirse en el proceso.",
+        "youtubeId": "rvY_fBH-d7E"
+      },
+      {
+        "id": "leccion-1783305435297",
+        "title": "Cinética Química: Ecuación de Arrhenius y Efecto de la Temperatura",
+        "description": "Este video aborda de manera práctica la influencia de la temperatura en la velocidad de reacción a través de la ecuación de Arrhenius, detallando cómo la fracción de colisiones efectivas se vincula con la energía de activación. El contenido guía al espectador en la resolución de problemas para calcular la energía de activación a partir de diagramas de perfiles de energía, determinar constantes de velocidad a diferentes temperaturas y aplicar métodos computacionales en Excel para linealizar la ecuación mediante gráficos de $\\ln(k)$ frente a $1/T$, obteniendo la energía de activación directamente desde la pendiente de la recta.",
+        "youtubeId": "3xqbaBj0Obk"
+      },
+      {
+        "id": "leccion-1783305573201",
+        "title": "Cinética Química: Mecanismos de Reacción y Resumen General",
+        "description": "Este video ofrece un repaso integral de la cinética química, conectando los factores que alteran la velocidad de reacción (estado físico, concentración, temperatura y catalizadores) con la teoría de colisiones y la formación del complejo activado. Asimismo, introduce los mecanismos de reacción analizando la molecularidad de los pasos elementales, la clasificación de la catálisis (homogénea, heterogénea y enzimática) y la deducción de la ley de velocidad a partir de la etapa más lenta del proceso, sirviendo como fundamento indispensable antes de avanzar hacia el equilibrio químico.",
+        "youtubeId": "GYfTf2VTQQY"
+      },
+      {
+        "id": "leccion-1783305722953",
+        "title": "Introducción al Equilibrio Químico y Principio de Le Châtelier",
+        "description": "Este video introduce los fundamentos del equilibrio químico en reacciones reversibles, explicando el concepto como un estado estacionario donde las concentraciones de las sustancias permanecen constantes. Detalla la formulación de la constante de equilibrio ($K_c$ o $K_p$) y diferencia entre sistemas homogéneos y heterogéneos, aclarando la exclusión de los sólidos en el cálculo. Finalmente, analiza el Principio de Le Châtelier y cómo el sistema responde para restablecerse ante alteraciones en la concentración, la temperatura y la presión, enfatizando que los catalizadores no modifican la posición del equilibrio sino que solo aceleran la velocidad para alcanzarlo.",
+        "youtubeId": "fNMBWLAzblA"
+      },
+      {
+        "id": "leccion-1783305812281",
+        "title": "Equilibrio Químico: Método ICE y Cálculo de Constantes",
+        "description": "Este video detalla la resolución de problemas prácticos de equilibrio químico empleando el método ICE (Inicio, Cambio, Equilibrio) con base en el texto de Raymond Chang. En el primer ejercicio, se muestra cómo calcular las concentraciones molares finales tras la disociación del yodo molecular en fase homogénea. En el segundo, se aborda un sistema gaseoso para determinar las presiones parciales en el equilibrio, ilustrando la conversión entre las constantes de equilibrio mediante la relación $K_p = K_c(RT)^{\\Delta n}$ y aplicando el álgebra correspondiente para despejar los cambios de presión en el sistema.",
+        "youtubeId": "lcXRrk6TGLo"
+      },
+      {
+        "id": "leccion-1783305878106",
+        "title": "Equilibrio Químico: Cociente de Reacción y Sistemas Heterogéneos",
+        "description": "Este video de QuimiSell aborda la resolución práctica de problemas avanzados de equilibrio químico basados en los ejercicios 14.46 y 14.47 del texto de Chang. En el primer apartado, se examina un sistema gaseoso homogéneo para evaluar el efecto de una perturbación en las concentraciones mediante el cálculo del cociente de reacción ($Q$) frente a $K_c$, aplicando el Principio de Le Châtelier para determinar el desplazamiento del sistema y calcular las nuevas concentraciones. En el segundo apartado, se resuelve un equilibrio heterogéneo que involucra carbono sólido y fases gaseosas, integrando la Ley de Dalton de las presiones parciales con la expresión de $K_p$ para determinar las presiones de los componentes en el estado final.",
+        "youtubeId": "kdDqNyxOtUY"
+      },
+      {
+        "id": "leccion-1783305956009",
+        "title": "Equilibrio Químico: Efectos Térmicos, Constantes y Grado de Disociación",
+        "description": "Este video de QuimiSell presenta una clase práctica dedicada a resolver ejercicios avanzados de equilibrio químico basados en el texto de Chang. El contenido aborda la predicción de desplazamientos en el equilibrio por cambios de presión, volumen y temperatura bajo el Principio de Le Châtelier, distinguiendo el comportamiento de la constante $K$ en reacciones endotérmicas y exotérmicas y reafirmando la neutralidad de los catalizadores en la posición final del sistema. Asimismo, detalla el cálculo de presiones parciales y constantes gaseosas ($K_p$) a distintas temperaturas, concluyendo con el desarrollo algebraico formal para expresar $K_p$ en función de la presión total ($P$) y del grado de disociación ($\\alpha$).",
+        "youtubeId": "HcpQhSL46nI"
+      },
+      {
+        "id": "leccion-1783306050866",
+        "title": "Ácidos y Bases: Equilibrio de Autoionización, pH y Fuerza de Electrolitos",
+        "description": "Este video ofrece una clase completa sobre los fundamentos de ácidos y bases, abarcando desde la autoionización del agua y su producto iónico ($K_w = 1.0 \\times 10^{-14}$ a 25 °C) hasta las escalas logarítmicas de pH y pOH. El contenido establece la diferencia metodológica para calcular la acidez según la fuerza del electrolito: para ácidos y bases fuertes se emplea la estequiometría directa debido a su disociación completa, mientras que para especies débiles se introduce el equilibrio químico mediante tablas ICE y la constante de acidez ($K_a$) para resolver las ecuaciones correspondientes. Finalmente, se detalla el cálculo del porcentaje de ionización como una medida formal de la extensión de la disociación en solución.",
+        "youtubeId": "Pr5Ea6-nZv4"
+      },
+      {
+        "id": "leccion-1783306133970",
+        "title": "Introducción a la Termoquímica: Entalpía, Entropía y Energía Libre de Gibbs",
+        "description": "Este video proporciona una introducción a los principios fundamentales de la termoquímica, describiendo las leyes energéticas que rigen la espontaneidad y el equilibrio en los sistemas químicos. El contenido diferencia entre procesos endotérmicos y exotérmicos, define el concepto de función de estado y analiza las tres variables termodinámicas principales: la entalpía ($\\Delta H$) asociada al intercambio de calor a presión constante, la entropía ($\\Delta S$) como medida del desorden molecular según la segunda ley de la termodinámica, y la energía libre de Gibbs ($\\Delta G = \\Delta H - T\\Delta S$) como el criterio definitivo para determinar la espontaneidad o el equilibrio de una reacción.",
+        "youtubeId": "ysiPnMGCtLs"
       }
     ],
     "category": "Química"
