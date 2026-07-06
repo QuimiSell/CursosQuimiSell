@@ -238,6 +238,24 @@
         "title": "Cinética Química: Método Integrado y Gráfico",
         "description": "Este video explica cómo determinar el orden de una reacción (cero, primero o segundo orden) mediante el método integrado, utilizando herramientas como Excel para identificar cuál transformación de los datos genera una línea recta:Orden 0: Recta al graficar la concentración frente al tiempo ($[A]$ vs. $t$).Orden 1: Recta al graficar el logaritmo natural de la concentración frente al tiempo ($\\ln[A]$ vs. $t$).Orden 2: Recta al graficar el inverso de la concentración frente al tiempo ($\\frac{1}{[A]}$ vs. $t$).Asimismo, se detalla que la constante de velocidad ($k$) se obtiene directamente a partir de la pendiente de la recta ($m = \\frac{y_2 - y_1}{x_2 - x_1}$), y se menciona que este mismo análisis gráfico es aplicable utilizando presiones parciales en lugar de concentraciones.",
         "youtubeId": "APod0q7ct3Q"
+      },
+      {
+        "id": "leccion-1783304922073",
+        "title": "Cinética Química: Determinación del Orden con Excel y Calculadora",
+        "description": "Este video describe dos métodos prácticos para determinar el orden de una reacción (cero, primero o segundo) a partir de datos experimentales de concentración (o presiones parciales) y tiempo:Método Gráfico en Excel: Consiste en organizar las variables cronológicas y evaluar cuál de las transformaciones matemáticas ($[A]$, $\\ln[A]$ o $\\frac{1}{[A]}$) genera un comportamiento lineal en un gráfico de dispersión. La constante de velocidad ($k$) se deduce calculando la pendiente de la recta con la fórmula $m = \\frac{y_2 - y_1}{x_2 - x_1}$.Método Estadístico con Calculadora: Emplea el modo de regresión lineal ($y = A + Bx$) para introducir los pares de datos. El orden correcto se identifica al evaluar el coeficiente de correlación ($r$), seleccionando aquel modelo cuyo valor absoluto $|r|$ sea más cercano a $1$. Tras definir el orden, el valor de la pendiente proporciona la constante $k$ de forma directa a través de las funciones estadísticas del dispositivo.",
+        "youtubeId": "ijknuAPRlSg"
+      },
+      {
+        "id": "leccion-1783305063578",
+        "title": "Cinética Química: Concentración frente al Tiempo y Vida Media",
+        "description": "Este video aborda el análisis práctico de datos experimentales de concentración y tiempo para determinar el orden de una reacción, calcular su constante de velocidad ($k$) a partir de la pendiente de gráficos lineales y evaluar el concepto de vida media. El contenido incluye la aplicación de ecuaciones integradas de velocidad para predecir concentraciones finales en intervalos específicos de tiempo y utiliza el método de velocidades iniciales para modelar el comportamiento del sistema, ilustrando el procedimiento mediante ejercicios típicos de examen como la descomposición gaseosa y la hidrólisis de la sacarosa en medio ácido.",
+        "youtubeId": "b8GWqVLoXsQ"
+      },
+      {
+        "id": "leccion-1783305209937",
+        "title": "Cinética Química: Ecuaciones Integradas y Vida Media",
+        "description": "Este video presenta la resolución de ejercicios del texto de Brown enfocados en la variación de la concentración (o presión parcial) respecto al tiempo y los cálculos de vida media en cinéticas de primer orden. El contenido detalla el uso de las ecuaciones integradas de velocidad para despejar la constante $k$, determinar la vida media ($t_{1/2} = \\frac{\\ln 2}{k}$), calcular la cantidad de moles o concentración remanente tras un intervalo específico, y evaluar el tiempo requerido para que un reactivo se reduzca a una fracción determinada de su valor inicial.",
+        "youtubeId": "CALitVZPl8Y"
       }
     ],
     "category": "Química"
