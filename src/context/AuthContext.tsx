@@ -18,7 +18,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [pat, setPat] = useState<string | null>(localStorage.getItem('qs_github_pat'));
   const [repoOwner, setRepoOwner] = useState<string>(localStorage.getItem('qs_repo_owner') || 'QuimiSell');
-  const [repoName, setRepoName] = useState<string>(localStorage.getItem('qs_repo_name') || 'MetodosNumericosQuimiSell');
+  const [repoName, setRepoName] = useState<string>(localStorage.getItem('qs_repo_name') || 'CursosQuimiSell');
   const [filePath, setFilePath] = useState<string>(localStorage.getItem('qs_file_path') || 'courses.json');
   const [branch, setBranch] = useState<string>(localStorage.getItem('qs_branch') || 'main');
 
