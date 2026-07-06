@@ -318,6 +318,68 @@
     "id": "curso-1783306352353",
     "title": "Biología PreUniversitaria USAC",
     "description": "Este curso se centra en los temas teóricos para el ingreso a la USAC en el área de Biología",
-    "lessons": []
+    "lessons": [
+      {
+        "id": "leccion-1783306731929",
+        "title": "Introducción a la Biología: El Método Científico y Características de la Vida",
+        "description": "Este video marca el inicio del curso introduciendo los conceptos fundamentales de la biología como ciencia fáctica. El contenido detalla las bases del método científico y las diferencias entre el razonamiento inductivo y deductivo, repasando brevemente los hitos históricos de figuras como Aristóteles, Darwin, Watson y Crick. Asimismo, clasifica las distintas ramas de esta disciplina, describe los niveles de organización jerárquica de la materia (desde el nivel químico hasta la biosfera) y analiza las características esenciales que definen a los seres vivos, tales como la organización celular, el metabolismo (anabolismo y catabolismo), la homeostasis, la irritabilidad y la adaptación evolutiva.",
+        "youtubeId": "1wSKAwCg7Oc"
+      },
+      {
+        "id": "leccion-1783306793417",
+        "title": "Bioquímica: Fundamentos Moleculares, Propiedades del Agua y Biomoléculas",
+        "description": "Este video ofrece una introducción a la química de la vida, examinando cómo las interacciones moleculares y atómicas sustentan las estructuras biológicas. El contenido aborda la naturaleza de los enlaces químicos y las propiedades físico-químicas del agua (como la cohesión y los puentes de hidrógeno), la regulación del pH mediante sistemas amortiguadores y la versatilidad de la tetravalencia del carbono. Asimismo, analiza exhaustivamente la estructura, niveles de organización y funciones biológicas de las cuatro grandes familias de macromoléculas orgánicas: carbohidratos, lípidos, proteínas (incluyendo su desnaturalización) y ácidos nucleicos (ADN y ARN).",
+        "youtubeId": "SzJmOrjNYR4"
+      },
+      {
+        "id": "leccion-1783306853042",
+        "title": "Metabolismo: Bioenergética, Respiración Celular y Fotosíntesis",
+        "description": "Este video analiza detalladamente el metabolismo celular, vinculando las leyes termodinámicas y cinéticas con los procesos bioquímicos de obtención y transformación de energía. El contenido profundiza en el papel del ATP y la regulación enzimática como base para comprender las vías metabólicas principales: la respiración celular aeróbica (desglosada en glucólisis citosólica, ciclo de Krebs mitocondrial y fosforilación oxidativa en la cadena de transporte de electrones), los mecanismos de respiración anaeróbica y fermentación en ausencia de oxígeno, y concluye con una revisión de la fotosíntesis (fase luminosa y ciclo de Calvin) como el proceso anabólico inverso de fijación de carbono.",
+        "youtubeId": "bebsBgCIMYo"
+      },
+      {
+        "id": "leccion-1783306942289",
+        "title": "Biología Celular: Estructura, Transporte de Membrana y División Celular",
+        "description": "Este video ofrece una revisión exhaustiva de la biología celular, examinando desde la distinción estructural entre organismos procariontes y eucariontes (con sus respectivos organelos y diferencias entre células animales y vegetales) hasta la dinámica de la membrana plasmática bajo el modelo del mosaico fluido, detallando los mecanismos de transporte pasivo y activo. Asimismo, analiza los procesos de división celular, contrastando la mitosis (reproducción somática diploide para crecimiento y reparación) con la meiosis (reducción cromosómica haploide para la formación de gametos), destacando el entrecruzamiento genético en la profase I como el motor de la variabilidad biológica.",
+        "youtubeId": "P4pttPWC7RI"
+      },
+      {
+        "id": "leccion-1783307728321",
+        "title": "Genética Mendeliana: Conceptos Fundamentales, Primera y Segunda Ley",
+        "description": "Este video introduce las bases de la genética clásica y las leyes de la herencia de Gregor Mendel, examinando la transmisión de caracteres biológicos de una generación a otra. El contenido define la estructura del material hereditario (organización del ADN en cromosomas mediante histonas, genes, alelos y locus) y diferencia con precisión entre genotipo y fenotipo, así como entre estados homocigotos y heterocigotos. Asimismo, detalla la aplicación de los cuadros de Punnett para demostrar el Principio de Uniformidad (Primera Ley) en la generación F1 y el Principio de Segregación (Seguerda Ley) en la generación F2 ante la interacción de alelos dominantes y recesivos, concluyendo con una introducción al Principio de Independencia de Caracteres (Tercera Ley).",
+        "youtubeId": "q7JzW6eUQCs"
+      },
+      {
+        "id": "leccion-1783307816025",
+        "title": "Genética: Leyes de Mendel, Herencia Post-Mendeliana y Síndromes Cromosómicos",
+        "description": "Este video ofrece una clase avanzada de genética que conecta la herencia clásica mendeliana con los mecanismos complejos post-mendelianos y las anomalías cromosómicas. El contenido repasa las tres leyes de Mendel —detallando el análisis de dihibridismo mediante el método de distribución de alelos en cuadros de Punnett de 16 combinaciones— e introduce las desviaciones de la dominancia completa, tales como la codominancia y la dominancia incompleta, ilustradas a través de los grupos sanguíneos y la pigmentación. Por último, aborda las mutaciones a nivel genómico, analizando fallos en la disyunción celular que dan origen a síndromes como el de Down, Turner, Klinefelter y Jacob.",
+        "youtubeId": "-lRgbLx5eR4"
+      },
+      {
+        "id": "leccion-1783307920593",
+        "title": "Ácidos Nucleicos: Estructura del ADN, Dinámica del ARN y Función Genética",
+        "description": "Este video ofrece una introducción a las bases teóricas de los ácidos nucleicos, detallando su composición química a partir de nucleótidos (grupo fosfato, pentosa y bases nitrogenadas purinas y pirimidinas) y su papel en el flujo de la información genética. El contenido examina la estructura bicatenaria, antiparalela y complementaria del ADN bajo el modelo de Watson y Crick —especificando los puentes de hidrógeno entre pares de bases—, contrasta las funciones y tipos de ARN (mensajero, ribosomal y de transferencia) en la síntesis de proteínas, y destaca la relevancia biológica de nucleótidos no nucleicos como el ATP, el AMPc y las coenzimas redox (NAD/NADP).",
+        "youtubeId": "LBLcERnYxVM"
+      },
+      {
+        "id": "leccion-1783308034137",
+        "title": "Biología Molecular: Replicación del ADN, Mutaciones y Dogma Central",
+        "description": "Este video ofrece una explicación de los procesos moleculares que rigen la herencia y la expresión genética en los seres vivos. El contenido profundiza en el mecanismo semiconservativo de la replicación del ADN, detallando la acción enzimática de la girasa, helicasa, proteínas SSB, ADN polimerasa y ligasa en la síntesis de las cadenas conductora y rezagada (fragmentos de Okazaki). Asimismo, clasifica las mutaciones según la alteración en la secuencia de bases y desarrolla las dos etapas esenciales del Dogma Central de la Biología Celular: la transcripción del ADN a ARN mensajero por la ARN polimerasa, y la traducción en los ribosomas, donde se utiliza el código genético (codones) para ensamblar cadenas de aminoácidos que darán origen a proteínas estructurales y funcionales vitales.",
+        "youtubeId": "2TuyIH9gK7U"
+      },
+      {
+        "id": "leccion-1783308155227",
+        "title": "Evolución: Historia del Pensamiento Evolutivo, Darwinismo y Teoría Sintética",
+        "description": "Este video ofrece un recorrido histórico sobre la transición del pensamiento fijista y teológico hacia la consolidación de la biología evolutiva moderna. El contenido examina el contexto pre-darwiniano, contrastando el catastrofismo de Cuvier con el gradualismo geológico de Hutton y Lyell, y analiza el transformismo de Lamarck basado en el uso y desuso de los órganos. Asimismo, profundiza en la revolución de Darwin, detallando las evidencias que sustentan la selección natural (como las estructuras homólogas, análogas y el registro fósil) junto a la influencia malthusiana en la lucha por la existencia. Finalmente, aborda las objeciones históricas al modelo original y explica la consolidación de la Teoría Sintética de la Evolución (Neodarwinismo), la cual integra la genética mendeliana y la biología molecular contemporánea para explicar la variabilidad y la herencia de los caracteres.",
+        "youtubeId": "_bNki3-pAdg"
+      },
+      {
+        "id": "leccion-1783308226946",
+        "title": "Evolución y Biodiversidad: Teorías del Origen de la Vida y Síntesis Evolutiva",
+        "description": "Este video marca el cierre del curso de biología, consolidando los conceptos de biodiversidad (genética, taxonómica y ecosistémica) y las principales corrientes que explican el origen y desarrollo de los seres vivos. El contenido contrasta las posturas históricas fijistas con los experimentos cruciales de Redi y Pasteur, que derrocaron de manera definitiva la teoría de la generación espontánea (abiogénesis clásica) en favor de la biogénesis. Asimismo, profundiza en el origen químico de la vida mediante la hipótesis de Oparin y Haldane en la Tierra primitiva y analiza la transición de los modelos evolutivos, diferenciando el transformismo lamarckiano de la selección natural darwiniana, para concluir con la integración genética y molecular que define al neodarwinismo contemporáneo.",
+        "youtubeId": "C7iP20cW0I0"
+      }
+    ],
+    "category": "Biología"
   }
 ]
