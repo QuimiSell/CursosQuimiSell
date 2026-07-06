@@ -313,5 +313,11 @@
       }
     ],
     "category": "Química"
+  },
+  {
+    "id": "curso-1783306352353",
+    "title": "Biología PreUniversitaria USAC",
+    "description": "Este curso se centra en los temas teóricos para el ingreso a la USAC en el área de Biología",
+    "lessons": []
   }
 ]
