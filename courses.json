@@ -381,5 +381,11 @@
       }
     ],
     "category": "Biología"
+  },
+  {
+    "id": "curso-1784762507409",
+    "title": "Fundamentos de C++",
+    "description": "Guía práctica que abarca desde la configuración inicial en Dev-C++ y la sintaxis básica (librerías, main y tipos de datos) hasta las estructuras de control y funciones; concluye con el manejo directo de memoria introduciendo variables de tipo puntero, operadores de dirección (&) y desreferenciación (*) para optimizar el paso de datos en el programa.",
+    "lessons": []
   }
 ]
