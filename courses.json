@@ -386,6 +386,86 @@
     "id": "curso-1784762507409",
     "title": "Fundamentos de C++",
     "description": "Guía práctica que abarca desde la configuración inicial en Dev-C++ y la sintaxis básica (librerías, main y tipos de datos) hasta las estructuras de control y funciones; concluye con el manejo directo de memoria introduciendo variables de tipo puntero, operadores de dirección (&) y desreferenciación (*) para optimizar el paso de datos en el programa.",
-    "lessons": []
+    "lessons": [
+      {
+        "id": "leccion-1784762607155",
+        "title": "Primer Programa en C++ con Dev-C++",
+        "description": "Guía introductoria sobre la creación y ejecución de un primer programa en C++ usando Dev-C++, desde la configuración inicial del proyecto o archivo fuente hasta la escritura de elementos clave como #include, main y using namespace std;, finalizando con la compilación y ejecución con la tecla F11 para desplegar un \"Hola Mundo\" en consola.",
+        "youtubeId": "qltkQ4_Qrdo"
+      },
+      {
+        "id": "leccion-1784762723598",
+        "title": "Conceptos Básicos y Sintaxis Fundamental de C++",
+        "description": "Clase introductoria para principiantes enfocada en la estructura inicial de un programa en C++ (librerías, main y namespaces), el uso de variables como contenedores de memoria (int, float, char), la entrada/salida de datos mediante cin y cout, y la aplicación de buenas prácticas sintácticas como el ; o los comentarios, cerrando con un ejercicio práctico de suma de dos números.",
+        "youtubeId": "ZDa1jjf1Glk"
+      },
+      {
+        "id": "leccion-1784762900239",
+        "title": "Variables, Operadores y Jerarquía de Operaciones en C++",
+        "description": "Clase enfocada en la declaración de tipos de datos fundamentales (int, float, bool, char), la diferenciación entre el ámbito local y global de las variables, y el funcionamiento de los operadores aritméticos junto con la jerarquía matemática, aplicando todo en la práctica mediante programas como un conversor de temperatura (Celsius a Fahrenheit) y el cálculo del área y longitud de un círculo.",
+        "youtubeId": "WpIxt7IHmEg"
+      },
+      {
+        "id": "leccion-1784763349393",
+        "title": "Conversión de Unidades de Tiempo en C++",
+        "description": "Clase enfocada en la declaración de tipos de datos fundamentales (int, float, bool, char), la diferenciación entre el ámbito local y global de las variables, y el funcionamiento de los operadores aritméticos junto con la jerarquía matemática, aplicando todo en la práctica mediante programas como un conversor de temperatura (Celsius a Fahrenheit) y el cálculo del área y longitud de un círculo.",
+        "youtubeId": "78acGNIe6xM"
+      },
+      {
+        "id": "leccion-1784763426331",
+        "title": "Cálculo de la Hipotenusa en C++ (Teorema de Pitágoras)",
+        "description": "Tutorial práctico enfocado en el cálculo de la hipotenusa de un triángulo rectángulo a partir de sus catetos; explica el uso de la librería <cmath> para aplicar la función de raíz cuadrada (sqrt()), la declaración de variables de tipo float para precisión decimal, la captura y despliegue de datos con cin y cout, y la validación final del Teorema de Pitágoras con un ejemplo de prueba.",
+        "youtubeId": "OmyLeQ8GHXQ"
+      },
+      {
+        "id": "leccion-1784763520389",
+        "title": "Potencias y Raíces Cuadradas en C++ con la Librería <cmath>",
+        "description": "Guía práctica sobre la ejecución de cálculos matemáticos de potencias y raíces en C++; abarca el uso de la librería <cmath> mediante las funciones pow() (para elevar un número a cualquier exponente) y sqrt() (para raíces cuadradas), la entrada de datos por teclado para procesar base y exponente, y la estructuración de un programa funcional con la librería <iostream>.",
+        "youtubeId": "3iq_mFajEJ8"
+      },
+      {
+        "id": "leccion-1784763639705",
+        "title": "Estructuras Condicionales (if, if-else e if Anidados) en C++",
+        "description": "Clase introductoria sobre el control de flujo condicional en C++; abarca el funcionamiento de la sentencia if simple, la estructura if-else para manejar alternativas falsas y el uso de condicionales anidados para tomar decisiones múltiples, ilustrando todo con ejemplos como validación de mayoría de edad, clasificación de notas y ejercicios propuestos para evaluar números positivos, negativos o neutros.",
+        "youtubeId": "X7Ppe44fFOE"
+      },
+      {
+        "id": "leccion-1784763720298",
+        "title": "La Sentencia switch y Selección Múltiple en C++",
+        "description": "Guía completa sobre la estructura de control switch para gestionar múltiples alternativas de forma organizada; aborda la sintaxis fundamental (case, break y default), ejemplos de aplicación con números y caracteres, y las limitaciones técnicas del switch frente a if-else al no permitir la evaluación de rangos o expresiones complejas.",
+        "youtubeId": "WOKNo9hATXY"
+      },
+      {
+        "id": "leccion-1784763795570",
+        "title": "Estructuras de Control Iterativas (Bucles while, for y do-while) en C++",
+        "description": "Clase introductoria enfocada en los ciclos de repetición en C++; aborda el funcionamiento del bucle while (evaluación previa), el ciclo for (ideal para iteraciones definidas y patrones visuales con ciclos anidados) y la estructura do-while (ejecución garantizada de al menos una vez), destacando la prevención de bucles infinitos y la aplicación en menús o validaciones de datos.",
+        "youtubeId": "tjoKREYc9-g"
+      },
+      {
+        "id": "leccion-1784763904300",
+        "title": "Introducción a las Funciones en C++",
+        "description": "Clase introductoria sobre la modularización de código mediante funciones en C++; explica el tipo de retorno (void, int, float), el paso de parámetros y el uso de return, remarcando la regla de no anidar funciones y el ámbito local de sus variables, ilustrado con ejemplos prácticos como funciones para sumar y calcular cuadrados invocadas desde main.",
+        "youtubeId": "p640qtQ0GiI"
+      },
+      {
+        "id": "leccion-1784763989156",
+        "title": "Estructuración y Aplicación de Funciones en C++ (Primos y Factoriales)",
+        "description": "Segunda parte sobre funciones en C++ enfocada en su declaración, estructura e invocación mediante analogías matemáticas; profundiza en el desarrollo de funciones con retorno booleano para validar números primos y el cálculo del factorial mediante iteraciones, enfatizando el uso del espacio de nombres std y el paso de datos a través de parámetros.",
+        "youtubeId": "I5orwFLNz_s"
+      },
+      {
+        "id": "leccion-1784764360773",
+        "title": "Arreglos (Arrays) y Estructuras de Datos Estáticas en C++",
+        "description": "Clase introductoria sobre arreglos en C++ como estructuras de datos estáticas almacenadas de forma consecutiva en memoria RAM; explica la indexación desde la posición cero, el recorrido de arreglos mediante ciclos for y la manipulación de diferentes tipos de datos, demostrando el uso de arreglos numéricos, de caracteres (char) para cadenas y de listas de texto utilizando el tipo string.",
+        "youtubeId": "0pAa07UiI9I"
+      },
+      {
+        "id": "leccion-1784764508005",
+        "title": "Introducción a Punteros y Gestión de Memoria en C++",
+        "description": "Guía práctica sobre el uso de punteros en C++ y su interacción directa con la memoria RAM; explica la diferencia entre el operador de dirección (&) y el de indirección/desreferenciación (*), demuestra la consistencia del puntero a través de distintos tipos de datos (como float), y aborda la navegación en arreglos mediante ciclos e índices a partir de la posición cero.",
+        "youtubeId": "HVPTcFrRu-A"
+      }
+    ],
+    "category": "Programación"
   }
 ]
